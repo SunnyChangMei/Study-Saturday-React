@@ -10,7 +10,7 @@ export default class Main extends Component {
       students: [],
       selectedStudent: {}
     };
-    this.selectedStudent = this.selectedStudent.bind(this);
+    this.selectStudent = this.selectStudent.bind(this);
   }
 
   componentDidMount() {
@@ -27,7 +27,7 @@ export default class Main extends Component {
     }
   }
 
-  selectedStudent(student) {
+  selectStudent(student) {
     return this.setState({ selectedStudent: student });
   }
 
@@ -44,7 +44,7 @@ export default class Main extends Component {
           </thead>
           <StudentList
             students={this.state.students}
-            selectedStudent={this.selectedStudent}
+            selectStudent={this.selectStudent}
           />
         </table>
         {this.state.selectedStudent.id ? (

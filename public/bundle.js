@@ -35417,7 +35417,7 @@ var Main = function (_Component) {
       students: [],
       selectedStudent: {}
     };
-    _this.selectedStudent = _this.selectedStudent.bind(_this);
+    _this.selectStudent = _this.selectStudent.bind(_this);
     return _this;
   }
 
@@ -35470,8 +35470,8 @@ var Main = function (_Component) {
       return getStudents;
     }()
   }, {
-    key: 'selectedStudent',
-    value: function selectedStudent(student) {
+    key: 'selectStudent',
+    value: function selectStudent(student) {
       return this.setState({ selectedStudent: student });
     }
   }, {
@@ -35508,7 +35508,7 @@ var Main = function (_Component) {
           ),
           _react2.default.createElement(_StudentList2.default, {
             students: this.state.students,
-            selectedStudent: this.selectedStudent
+            selectStudent: this.selectStudent
           })
         ),
         this.state.selectedStudent.id ? _react2.default.createElement(_SingleStudent2.default, { student: this.state.selectedStudent }) : null
@@ -36524,7 +36524,7 @@ var SingleStudent = function SingleStudent(props) {
         _react2.default.createElement(
           'tbody',
           null,
-          props.studens.tests.map(function (test) {
+          props.student.tests.map(function (test) {
             return _react2.default.createElement(
               'tr',
               { key: test.id },

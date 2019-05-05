@@ -20,7 +20,7 @@ const SingleStudent = props => {
             </tr>
           </thead>
           <tbody>
-            {props.studens.tests.map(test => {
+            {props.student.tests.map(test => {
               return (
                 <tr key={test.id}>
                   <td>{test.subject}</td>
